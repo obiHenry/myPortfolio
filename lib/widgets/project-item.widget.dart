@@ -135,7 +135,7 @@ class _ProjectItemWidgetState extends State<ProjectItemWidget>
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize:
-                                AppScreenSizes.isSmallScreen(context) ? 16 : 20,
+                                AppScreenSizes.isSmallScreen(context) ? 18 : 20,
                             color: isHovered
                                 ? Colors.black
                                 : AppColors.darkThemeTextPrimaryColor,
@@ -148,9 +148,7 @@ class _ProjectItemWidgetState extends State<ProjectItemWidget>
                         Text(
                           widget.project.description,
                           style: ScreenUiHelper().body(context).copyWith(
-                                fontSize: AppScreenSizes.isSmallScreen(context)
-                                    ? 12
-                                    : 14,
+                                fontSize: 16,
                                 color: isHovered
                                     ? Colors.black
                                     : AppColors.darkThemeTextPrimaryColor,

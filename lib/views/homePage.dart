@@ -47,14 +47,17 @@ class HomePage extends StatelessWidget {
                   height: 2,
                 ),
                 CustomText(
-                  text: "This, is, [b'Obi Henry]",
+                  text: "I'm, [b'Henry]",
                   textMap: {
                     "b": GoogleFonts.breeSerif(
                         fontWeight: FontWeight.w500,
                         fontSize: 32,
                         foreground: Paint()
-                          ..shader = const LinearGradient(
-                            colors: [Color(0xFF00dd9b), Color(0xFF1eebb3)],
+                          ..shader = LinearGradient(
+                            colors: [
+                              context.primaryColor,
+                              context.primaryColor
+                            ],
                           ).createShader(
                               const Rect.fromLTWH(0.0, 0.0, 30, 30))),
                   },
@@ -63,10 +66,58 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 8,
                 ),
-                Text(
-                  PersonalDetails.shortIntro,
-                  style: ScreenUiHelper().body(context),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RichText(
+                      text: TextSpan(children: [
+                        TextSpan(
+                          text: PersonalDetails.shortIntro[0],
+                          style: ScreenUiHelper()
+                              .body(context)
+                              .copyWith(fontSize: 16),
+                        ),
+                      ]),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        text: PersonalDetails.shortIntro[1],
+                        style: ScreenUiHelper()
+                            .body(context)
+                            .copyWith(fontSize: 16),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        text: PersonalDetails.shortIntro[2],
+                        style: ScreenUiHelper().body(context).copyWith(
+                              fontSize: 16,
+                            ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        text: PersonalDetails.shortIntro[3],
+                        style: ScreenUiHelper()
+                            .body(context)
+                            .copyWith(fontSize: 16),
+                      ),
+                    ),
+                  ],
                 ),
+                // Text(
+                //   PersonalDetails.shortIntro,
+                //   style: ScreenUiHelper().body(context),
+                // ),
                 const SizedBox(
                   height: 18,
                 ),

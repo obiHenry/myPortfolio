@@ -67,8 +67,10 @@ class _AboutPageState extends State<AboutPage> {
                     ),
                     Text(PersonalDetails.intro,
                         style: ScreenUiHelper().body(context).copyWith(
-                            fontSize: 14,
-                            color: AppColors.darkThemeTextSecondaryColor)),
+                            // wordSpacing: 2,
+                            // letterSpacing: 1.5,
+                            fontSize: 16,
+                            color: AppColors.darkThemeTextPrimaryColor)),
                     const SizedBox(
                       height: 25,
                     ),

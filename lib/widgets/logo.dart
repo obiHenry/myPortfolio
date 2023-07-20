@@ -25,12 +25,13 @@ class LogoComponent extends StatelessWidget {
             style: TextStyle(fontSize: 14, color: AppColors.darkThemeIconColor),
           ),
           TextSpan(
-              text: 'Henry',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                color: context.primaryColor,
-                fontSize: 14,
-              )),
+            text: 'Henry',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              color: context.primaryColor,
+              fontSize: 14,
+            ),
+          ),
         ]))
       ],
     );

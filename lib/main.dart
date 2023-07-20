@@ -3,11 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:henryportfolio/bindings/portfolioBindings.dart';
 import 'package:henryportfolio/utils/router/auto_router.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 import 'constant/appTheme.dart';
 import 'controller/themeController.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  setPathUrlStrategy();
   runApp(MyApp());
 }
 
