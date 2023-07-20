@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:henryportfolio/models/exprience_model.dart';
 
 import '../models/project_model.dart';
-import '../models/skill.dart';
+import '../models/skill_model.dart';
 import '../models/featured_skill_model.dart';
 
 mixin SystemProperties {
@@ -13,131 +13,35 @@ mixin SystemProperties {
 mixin PersonalDetails {
   static const logoImage = 'assets/images/business.png';
 
-  static List<Skill> skillList = <Skill>[
+  static const String shortIntro =
+      'Full stack developer, and specialize in building efficient Flutter Applications that just work across all platforms and browsers. I care deeply about building interfaces that are usable and pleasant for the most number of people possible. Skilled with working as a team and incorporating input into ProjectModels. Strong eye for detail and tenacity to never quit on something until it is absolutely perfect. always learning and aspires to be better.';
+  static const String intro =
+      "I started my career into software developement as android developer in 2018. I enrolled for an internship where I learnt about programming in general, learnt and built first android applications in native android, the internship lasted for 6 months. after that i continued building and exploring on my own, until Later in 2020 I heard about flutter which helps in building cross platform applications. After researching about flutter, I applied for an internship and got to learn and work for a full year, through which I was able to learn communication skills and code architectures and built a shopping clothing app together with my team for the comapny at the end of the internship. After that I worked as a freelancer for various persons and company until now, I gained experience of how to build applications in production level. I also learnt web basis like HTML, CSS and Javascript along the way. Presently I'm focusing on backend developement. I learnt how to create API using spring boot, And working ProjectModels on it. I'm currently learning SQL and postgreSQL.";
+
+  static List<Skill> homeSkillList = <Skill>[
     Skill(
       title: 'App Developer',
-      image: 'assets/images/skill/android.png',
+      image: 'assets/images/android.png',
       color: Colors.green,
     ),
     Skill(
       title: 'Web Developer',
-      image: 'assets/images/skill/web.png',
+      image: 'assets/images/web.png',
       color: Colors.green,
     ),
     Skill(
       title: 'Backend\nDeveloper in progress',
-      image: 'assets/images/skill/backend.png',
+      image: 'assets/images/backend.png',
       color: Colors.green,
     ),
     Skill(
       title: 'Best\nPartner✌',
-      image: 'assets/images/skill/luffy.png',
+      image: 'assets/images/luffy.png',
       color: Colors.green,
     )
   ];
-  // static const String whatsappLink = 'https://wa.me/7997217156';
 
-  // static const String githubUserName = 'shashiben';
-  // static const String githubDataUrl =
-  //     'https://api.github.com/users/$githubUserName/repos';
-
-  static List<ProjectModel> projectsList = [
-    ProjectModel(
-      id: '0',
-      type: ['Website'],
-      title: '',
-      githubLink: 'https://github.com/shashiben/Hostel-Management',
-      websiteLink: 'https://hostel-app-test.herokuapp.com/login',
-      description:
-          'Created a hostel management web app to track students where they are, and download data of attendance for each day',
-      tools: ['Redux', 'Node Js', 'Express Js', 'Mongo DB', 'React Js'],
-    ),
-    ProjectModel(
-        id: '1',
-        type: ['Website'],
-        title: 'E Commerce',
-        githubLink: 'https://github.com/shashiben/MERN-ECommerce',
-        websiteLink: 'https://nsd-solutions.herokuapp.com/',
-        description:
-            'An ECommerce application similar to amazon or flipkart where users can buy products,contains admin panel',
-        tools: ['Redux', 'Node Js', 'Express Js', 'Mongo DB', 'React Js']),
-    ProjectModel(
-        id: '2',
-        type: ['Application'],
-        title: 'Flutter Custom Graph',
-        githubLink: 'https://github.com/shashiben/flutter_custom_graph',
-        description:
-            'Created a flutter package for building customized and aesthetic graphs.Built with the help of custom graphs.',
-        tools: ['Flutter']),
-    ProjectModel(
-        id: '3',
-        type: ['Application'],
-        title: 'Face Mask Detection',
-        githubLink: 'https://github.com/shashiben/flutter-face-mask-detection',
-        description:
-            'Mobile Application to detect whether person wears a mask or not.Built with Flutter and tensorflow lite.',
-        tools: ['Flutter', 'Tflite', 'CNN', 'Python']),
-    ProjectModel(
-        id: '4',
-        type: ['Website'],
-        title: 'FReMP Stack',
-        githubLink: 'https://github.com/shashiben/FReMP-Stack',
-        description:
-            'Created a simple application to show how to perform crud operations using flask,react and mongo db and includes how to search by name.',
-        tools: ['Flask', 'React', 'Mongo DB', 'Python']),
-    // ProjectModel(
-    //     id: '5',
-    //     type: ['Opencv'],
-    //     title: 'Motion Detection Using OpenCv',
-    //     githubLink: 'https://github.com/shashiben/Motion-Detection-with-Opencv',
-    //     description:
-    //         'Detects motion of an object or a person and draws bounding box over it',
-    //     tools: ['Python', 'OpenCv']),
-    // ProjectModel(
-    //     id: '6',
-    //     type: ['Website', 'Application'],
-    //     title: 'Alarm Managaer',
-    //     githubLink: 'https://github.com/shashiben/Flutter-Alarm',
-    //     description:
-    //         'An application to schedule alarms on multiple devices supports for both android and ios,built using mongo db and flutter.',
-    //     tools: ['Flutter', 'Mongo DB', 'Node Js', 'Express Js']),
-    // ProjectModel(
-    //     id: '7',
-    //     type: ['Application', 'Website'],
-    //     title: 'Cache With Hive',
-    //     githubLink: 'https://github.com/shashiben/Flutter-anime',
-    //     description:
-    //         'Application which shows how to cache rest api data,so that user can view data even though he is offline.Presently supports for web, android and ios',
-    //     tools: ['Flutter', 'Hive']),
-    // ProjectModel(
-    //     id: '8',
-    //     type: ['Application'],
-    //     title: 'College Fest App',
-    //     playstoreLink:
-    //         'https://play.google.com/store/apps/details?id=com.cse.cynosure',
-    //     githubLink: 'https://github.com/shashiben/College-Fest-app',
-    //     description:
-    //         'Created an app for college fest where users can register for events and get live notifications regarding events and has payment gateway integration.',
-    //     tools: ['Java', 'Firebase', 'Paytm']),
-    // ProjectModel(
-    //     id: '9',
-    //     type: ['Website', 'Application'],
-    //     websiteLink: 'https://shashiben.github.io',
-    //     description:
-    //         'Created portfolio using flutter,Supports for mac os,windows,linux,web,ios,android',
-    //     githubLink: 'https://github.com/shashiben/portfolio',
-    //     title: 'Portfolio',
-    //     tools: ['Flutter']),
-    // ProjectModel(
-    //     id: '10',
-    //     type: ['Backend'],
-    //     title: 'Node Mailer',
-    //     githubLink: 'https://github.com/shashiben/node-mailer',
-    //     description:
-    //         'Backend for sending mails.Used to add functionality of sending mail without opening any other applications',
-    //     tools: ['Node JS', 'Email JS', 'Express JS'])
-  ];
-  static const List<String> skillsList = [
+  static const List<String> aboutSkillsList = [
     'Flutter',
     'REST API with spring boot',
     'SQL/postgresql in Progress',
@@ -150,6 +54,7 @@ mixin PersonalDetails {
     'Css',
     'Java script',
     'Problem Solving',
+    'DSA'
   ];
 
   static List<FeaturedSkillModel> featuredSkills = [
@@ -158,79 +63,208 @@ mixin PersonalDetails {
     FeaturedSkillModel(name: 'Web Developer', percent: 50),
   ];
 
+  static List<ProjectModel> projectsList = [
+    ProjectModel(
+      id: '0',
+      type: ['Application'],
+      title: 'E Meet',
+      githubLink: 'https://github.com/obiHenry/E_meet',
+      description:
+          'Created a social media app with android native where you can post, add friends, follow, unfollow, like, comment and chat with friends just like facebook.',
+      tools: [
+        'Java',
+        'Firebase',
+        'Android Native',
+      ],
+    ),
+    ProjectModel(
+        id: '1',
+        type: ['Application'],
+        title: 'Readers_pub_book',
+        githubLink: 'https://github.com/obiHenry/Readers_pub_book',
+        description:
+            'A book  application similar to dreams built with android native  where users can come and read books available on the app, save to favourite and add to library has admin panel the owner adds these books her self',
+        tools: [
+          'Java',
+          'Firebase',
+          'Android Native',
+        ]),
+    ProjectModel(
+        id: '2',
+        type: ['Application'],
+        title: 'Expense_planner',
+        githubLink: 'https://github.com/obiHenry/Expense_planner',
+        description:
+            'Created a flutter app  for planning all expenses made in a week or month depends on how you want to calculate either weekly, monthly or yearly.',
+        tools: ['Flutter']),
+    ProjectModel(
+        id: '3',
+        type: ['Application'],
+        title: 'Cloth Shopping App',
+        websiteLink:
+            'https://drive.google.com/file/d/11JAoRkg5avM5rI_BhOxncPE8ZqY2oZsb/view?usp=drivesdk',
+        description:
+            'Flutter Application used to buy customized cloths online, you can select design you want from the app and give your measurement on the app, then place an order, then the order will be taken and delivered to you within the time stated on the app',
+        tools: [
+          'Flutter',
+          'Firebase',
+        ]),
+    ProjectModel(
+        id: '4',
+        type: ['Application'],
+        title: 'My final project',
+        websiteLink:
+            'https://drive.google.com/file/d/1JQM-idm9O83mqKIIUm4U1cTPYsfDSZaJ/view?usp=drivesdk',
+        description:
+            'Created a simple application to record students id card to avoid loss and easy retrieval when needed.',
+        tools: [
+          'Flutter',
+          'Node Js',
+          'Mongo DB',
+        ]),
+    ProjectModel(
+        id: '5',
+        type: ['Application'],
+        title: 'The adventures of Muna',
+        playstoreLink:
+            'https://play.google.com/store/apps/details?id=com.safetychic.aom',
+        appstoreLink:
+            'https://apps.apple.com/ng/app/the-adventures-of-muna/id1633517832',
+        description:
+            'The Adventures of Muna is a child safety education game designed to teach children different safety topics in a fun and memorable way. It leverages simple safety messaging, audiovisual features, problem-solving training, and an African representation to present complex safety knowledge in a way that children will learn and remember',
+        tools: ['flutter', 'Firebase']),
+    ProjectModel(
+        id: '6',
+        type: ['Application'],
+        title: 'Social Exchange',
+        appstoreLink:
+            'https://apps.apple.com/ng/app/corps-rapport-exchange/id6446414458',
+        playstoreLink:
+            'https://play.google.com/store/apps/details?id=com.magma.corpsrapport',
+        description:
+            'I created this app for an organisation, It\'s a flutter application created for exchanging information using nfc and and barcode scanning, can be used to form business cards too.',
+        tools: [
+          'Flutter',
+          'Firebase',
+        ]),
+    ProjectModel(
+        id: '7',
+        type: ['Website'],
+        title: 'Syticks',
+        appstoreLink:
+            'https://apps.apple.com/ng/app/syticks-for-businesses/id1663739558',
+        description:
+            'Application which is used to create tickets for events and allows audience to buy ticket from the app, after events organisers can withdraw the funds they made.',
+        tools: ['Flutter', 'Java', 'API']),
+    ProjectModel(
+        id: '8',
+        type: ['Website'],
+        title: 'springboot-webapp',
+        githubLink: 'https://github.com/obiHenry/springboot-webapp',
+        description: 'Created a spring boot web app for inventory.',
+        tools: ['Java', 'Springboot']),
+    ProjectModel(
+        id: '9',
+        type: ['Backend'],
+        githubLink: 'https://github.com/obiHenry/api-configuration',
+        description:
+            'created API for social media app for user creation and posts',
+        title: 'Social media API creation',
+        tools: ['Java', 'Spring boot', 'h2-database']),
+    ProjectModel(
+        id: '10',
+        type: ['Website'],
+        title: 'Portfolio',
+        githubLink: 'https://github.com/obiHenry/myPortfolio',
+        description:
+            'Created portfolio using flutter,Supports for mac os,windows,linux,web,ios,android',
+        tools: [
+          'Flutter',
+        ])
+  ];
+
   static const List<ExperienceModel> experienceList = [
     ExperienceModel(
-        title: 'TopRecur',
+        title: 'IDK',
         position: 'Internship',
-        timePeriod: 'Jan 2021 - Feb 2021',
+        timePeriod: 'AUG 2018 - JAN 2019',
         description: [
           'Worked as an intern for mobile app developement and front end developer',
-          'Application is similar to Workflowy for note taking',
-          'Added export service of all the data present in the parent node',
+          'I conducted  trial runs of program to be sure they produced reauired ressult',
+          'I learnt how to style texts and organise an xml file ',
           'Added Functionality to customize text styling dynamically'
         ],
         tools: [
-          'Flutter',
-          'Html',
-          'Css',
-          'JS',
-          'React',
-          'Flask',
-          'Celery',
-          'Mongo DB'
+          'Android studio',
+          'Java',
+          'MySQL',
         ]),
     ExperienceModel(
-        title: 'ITI Hindupur',
+      tools: [
+        'Firebase',
+        'Flutter',
+      ],
+      timePeriod: 'AUG 2020 - MAR 2021',
+      title: 'Customized Native',
+      position: 'Internship',
+      description: [
+        'Managing a team of 4 as scrum master',
+        'Built the the clothing admin section',
+        'Handled the whole clude involved in the admin section',
+        'Integrated Payment Gateway Integration (Flutterwave)',
+        'Implemented Video Broadcasting feature,',
+      ],
+    ),
+    ExperienceModel(
+        title: 'Safety chick',
         position: 'Freelancer',
-        timePeriod: 'Dec 2020 - Jan 2021',
+        timePeriod: 'APR 2022 - JUL 2022',
         description: [
-          'Developed UI for ITI Hindupur and developed mobile application',
-          'Designed Admin Panel to send notifications or add notes or create tests',
+          'Developed UI for safety chic app and developed mobile application',
+          'Worked with a team member to Designed game ui section',
           'Designed College Application to create quiz for different batches',
-          'Able to add or delete or update notes',
-          'Added Contact Support using Freshchat',
-          'Can check analysis of his previous test'
+          'worked with firebase to create user accounts'
         ],
         tools: [
           'Flutter',
           'Firebase',
-          'FreshChat',
-          'Figma'
+          'Figma',
         ]),
     ExperienceModel(
-        title: 'Tefso',
+        title: 'Syticks',
         position: 'Mobile App Developer',
-        timePeriod: 'Aug 2020 - Sep 2021',
+        timePeriod: 'May 2022 - Till date',
         description: [
-          'Worked collaboratively with designer to bring mobile app to life',
+          'Worked collaboratively with designer and backend developer to bring mobile app to life',
           'Developed UI for application similar to doubtnut',
-          'Created frontend application to check user profile and quiz',
-          'Added voice support for adding questions',
-          'Designed UI for asking doubts or to check others questions.',
+          'Created frontend section to request withdrawal after 24 hours ',
+          'Added account submission page',
+          'Designed UI for displaying past and present events.',
         ],
         tools: [
           'Flutter',
-          'Figma'
+          'Figma',
+          'API',
         ]),
     ExperienceModel(
-      tools: ['Firebase', 'DialogFlow', 'Agora', 'GCP', 'Node js', 'Mongo'],
-      timePeriod: 'May 2020 - July 2020',
-      title: 'Naaniz',
-      position: 'Developement Team Lead',
+      tools: ['Firebase', 'Flutter', 'NFC', 'Figma', 'Firebase dynamic link'],
+      timePeriod: 'FEB 2023 - Till date',
+      title: 'Corps Rapport',
+      position: 'Mobile App Developer',
       description: [
-        'Managing a team of 25 members, able to divide and assign works to them',
-        'Designed DB Schema and made the UI of the app responsive',
-        'Integrated Payment Gateway Integration (Razorpay)',
-        'Implemented Video Broadcasting feature,Chat bot,Voice Search'
+        'Developed and designed the whole app',
+        'Implemented NFC feature for scanning information stored on the card',
+        'Integrated bar code scanning to get information',
+        'Implemented deeplinking using firebase dynamic links',
+        'implemented share function used to share user information and save the contacts '
       ],
     ),
   ];
-  // static const String email = 'kumarshashi5294@gmail.com';
+  static const String email = 'obihenry578@gmail.com';
+  static const String location =
+      'Government house street, Anambra State, Nigeria';
 
-  static const String shortIntro =
-      'Full stack developer, and specialize in building efficient Flutter Applications that just work across all platforms and browsers. I care deeply about building interfaces that are usable and pleasant for the most number of people possible. Skilled with working as a team and incorporating input into ProjectModels. Strong eye for detail and tenacity to never quit on something until it is absolutely perfect. always learning and aspires to be better.';
-  static const String intro =
-      "I started my career into software developement as android developer in 2018. I enrolled for an internship where I learnt about programming in general, learnt and built first android applications in native android, the internship lasted for 6 months. after that i continued building and exploring on my own, until Later in 2020 I heard about flutter which helps in building cross platform applications. After researching about flutter, I applied for an internship and got to learn and work for a full year, through which I was able to learn communication skills and code architectures and built a shopping clothing app together with my team for the comapny at the end of the internship. After that I worked as a freelancer for various persons and company until now, I gained experience of how to build applications in production level. I also learnt web basis like HTML, CSS and Javascript along the way. Presently I'm focusing on backend developement. I learnt how to create API using spring boot, And working ProjectModels on it. I'm currently learning SQL and postgreSQL.";
+  static const String call = '+2349056016875';
 }
 
 mixin EducationDetails {
@@ -250,4 +284,16 @@ mixin EducationDetails {
   static const double secondaryPercentage = 100;
 
   static const double universityPercentage = 100;
+}
+
+mixin SocialLinks {
+  static const String linkedinUrl =
+      'https://www.linkedin.com/in/henry-obi-140b261b2';
+  static const String twitterLink = 'https://twitter.com/thehenryobi';
+  static const String githubLink = 'https://github.com/obihenry';
+  static const String facebookLink =
+      'https://www.facebook.com/obi.henry.796?mibextid=ZbWKwL';
+  static const String whatsappLink = 'https://wa.me/9056016875';
+  static const String instagramLink =
+      'https://instagram.com/obi_henry_?igshid=MzNlNGNkZWQ4Mg==';
 }

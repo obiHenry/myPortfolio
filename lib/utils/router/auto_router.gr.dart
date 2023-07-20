@@ -11,7 +11,7 @@
 import 'package:auto_route/auto_route.dart' as _i7;
 import 'package:henryportfolio/views/about.dart' as _i2;
 import 'package:henryportfolio/views/contactPage.dart' as _i6;
-import 'package:henryportfolio/views/dashBoard/dashBoard_screen.dart' as _i5;
+import 'package:henryportfolio/views/dashBoard_screen.dart' as _i5;
 import 'package:henryportfolio/views/ExperiencePage.dart' as _i3;
 import 'package:henryportfolio/views/homePage.dart' as _i1;
 import 'package:henryportfolio/views/projects.dart' as _i4;
@@ -54,7 +54,7 @@ abstract class $AppRouter extends _i7.RootStackRouter {
     ContactRoute.name: (routeData) {
       return _i7.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.ContactScreen(),
+        child: _i6.ContactScreen(),
       );
     },
   };

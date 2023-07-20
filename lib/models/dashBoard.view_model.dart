@@ -16,7 +16,7 @@ class DashboardViewModel extends BaseViewModel {
     const AboutPage(),
     const Projects(),
     const Experience(),
-    const ContactScreen(),
+    ContactScreen(),
     const FooterWidget(),
   ];
 }

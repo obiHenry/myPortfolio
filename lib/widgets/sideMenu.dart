@@ -1,187 +1,81 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/material.dart';
+import 'package:henryportfolio/models/dashBoard.view_model.dart';
 
-// class SideMenu extends StatefulWidget {
-//   const SideMenu({
-//     Key? key,
-//   }) : super(key: key);
+import '../constant/app_data.dart';
+import '../constant/colorConst.dart';
 
-//   @override
-//   State<SideMenu> createState() => _SideMenuState();
-// }
+// ignore: must_be_immutable
+class SideMenu extends StatefulWidget {
+  DashboardViewModel? model;
+  // ignore: prefer_typing_uninitialized_variables
+  final scaffoldKey;
+  SideMenu({Key? key, this.model, this.scaffoldKey}) : super(key: key);
 
-// class _SideMenuState extends State<SideMenu> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Drawer(
-//       child: ListView(
-//         children: [
-//           DrawerHeader(
-//             decoration: const BoxDecoration(
-//                 border:
-//                     Border(bottom: BorderSide(color: Colors.grey, width: 1))),
-//             child: Image.asset(
-//               'assets/images/logo_white.png',
-//               width: 175,
-//             ),
-//           ),
-//           DrawerListTile(
-//             title: "Dashboard",
-//             svgSrc: "assets/icons/menu_dashbord.svg",
-//             press: () {
-//               Navigator.popAndPushNamed(
-//                 context,
-//                 DashboardScreen.routeName,
-//               );
-//             },
-//           ),
-//           DrawerListTile(
-//             title: "Deposit",
-//             svgSrc: "assets/icons/menu_tran.svg",
-//             press: () {
-//               setState(() {
-//                 setDepositOrWithdrawalButton(context, 'deposit');
-//               });
-//               Navigator.popAndPushNamed(
-//                 context,
-//                 SelectCoinToDeposit.routeName,
-//               );
-//             },
-//           ),
-//           DrawerListTile(
-//             title: "Withdrawal",
-//             svgSrc: "assets/icons/menu_tran.svg",
-//             press: () {
-//               setState(() {
-//                 setDepositOrWithdrawalButton(context, 'withdraw');
-//                 // setScreen(context, 'depositOrWithdrawalScreen');
-//                 // Provider.of<VariableProvider>(context, listen: false)
-//                 //     .setFromWithdrawalButton = true;
-//                 // Provider.of<VariableProvider>(context, listen: false)
-//                 //     .setFromDepositButton = false;
-//               });
+  @override
+  State<SideMenu> createState() => _SideMenuState();
+}
 
-//               Navigator.popAndPushNamed(
-//                 context,
-//                 SelectCoinToDeposit.routeName,
-//               );
-//             },
-//           ),
-//           DrawerListTile(
-//             title: "Asset Invest",
-//             svgSrc: "assets/icons/menu_tran.svg",
-//             press: () {
-//               Navigator.popAndPushNamed(
-//                 context,
-//                 InvestmentScreen.routeName,
-//               );
-//             },
-//           ),
-//           // DrawerListTile(
-//           //   title: "Wallet Connect",
-//           //   svgSrc: "assets/icons/menu_doc.svg",
-//           //   press: () {},
-//           // ),
-//           // DrawerListTile(
-//           //   title: "KYC",
-//           //   svgSrc: "assets/icons/menu_doc.svg",
-//           //   press: () async {
-//           //     Navigator.popAndPushNamed(
-//           //       context,
-//           //       KYCScreen.routeName,
-//           //     );
-//           //   },
-//           // ),
-//           // DrawerListTile(
-//           //   title: "Profile",
-//           //   svgSrc: "assets/icons/menu_profile.svg",
-//           //   press: () {
-//           //     Navigator.popAndPushNamed(
-//           //       context,
-//           //       ProfileScreen.routeName,
-//           //     );
-//           //   },
-//           // ),
-//           DrawerListTile(
-//             title: "Investments",
-//             svgSrc: "assets/icons/menu_doc.svg",
-//             press: () async {
-//               Navigator.popAndPushNamed(
-//                 context,
-//                 InvestmentProgressScreen.routeName,
-//               );
-//             },
-//           ),
-//           // DrawerListTile(
-//           //   title: "Referral Earnings",
-//           //   svgSrc: "assets/icons/menu_profile.svg",
-//           //   press: () {
-//           //     Navigator.popAndPushNamed(
-//           //       context,
-//           //       ReferralsScreen.routeName,
-//           //     );
-//           //   },
-//           // ),
-//           DrawerListTile(
-//             title: "Settings",
-//             svgSrc: "assets/icons/menu_setting.svg",
-//             press: () {
-//               Navigator.popAndPushNamed(
-//                 context,
-//                 SettingsScreen.routeName,
-//               );
-//             },
-//           ),
-//           // DrawerListTile(
-//           //   title: "Logout",
-//           //   svgSrc: "assets/icons/menu_setting.svg",
-//           //   press: () {
-//           //     showModal.showModalWidget(
-//           //         context: context,
-//           //         widget: AlertDialog(
-//           //           title: const Text("Sign out"),
-//           //           content: const Text("Do you want to Sign out?"),
-//           //           actions: [
-//           //             GestureDetector(
-//           //               onTap: () {
-//           //                 Fluttertoast.showToast(
-//           //                     msg: 'You are logged out',
-//           //                     toastLength: Toast.LENGTH_LONG,
-//           //                     gravity: ToastGravity.BOTTOM,
-//           //                     backgroundColor: Colors.black,
-//           //                     textColor: Colors.white);
-
-//           //                 Navigator.of(context).pop();
-//           //                 Navigator.pushNamedAndRemoveUntil(context,
-//           //                     SignInScreen.routeName, (route) => false);
-//           //               },
-//           //               child: const Text(
-//           //                 "Yes",
-//           //                 style: TextStyle(color: kPrimaryColor),
-//           //               ),
-//           //             ),
-//           //             const SizedBox(
-//           //               width: 20,
-//           //             ),
-//           //             GestureDetector(
-//           //               onTap: () {
-//           //                 Navigator.of(context).pop();
-//           //               },
-//           //               child: const Text(
-//           //                 "No",
-//           //                 style: TextStyle(color: kPrimaryColor),
-//           //               ),
-//           //             ),
-//           //           ],
-//           //         ));
-//           //   },
-//           // ),
-//           const SizedBox(width: 12),
-//         ],
-//       ),
-//     );
-//   }
-// }
+class _SideMenuState extends State<SideMenu> {
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        children: [
+          Align(
+            alignment: Alignment.topLeft,
+            child: IconButton(
+                onPressed: () {
+                  widget.scaffoldKey.currentState!.closeEndDrawer();
+                },
+                icon: const Icon(Icons.cancel)),
+          ),
+          DrawerHeader(
+            decoration: const BoxDecoration(
+                border:
+                    Border(bottom: BorderSide(color: Colors.grey, width: 1))),
+            child: Image.asset(
+              PersonalDetails.logoImage,
+              height: 100,
+              width: 100,
+            ),
+          ),
+          Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: {
+                'Home': 0,
+                'About': 1,
+                "Projects": 2,
+                'Exprience': 3,
+                'Contact': 4,
+              }
+                  .entries
+                  .map(
+                    (e) => Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextButton(
+                        onPressed: () {
+                          widget.scaffoldKey.currentState!.closeEndDrawer();
+                          widget.model!.itemScrollController.scrollTo(
+                              index: e.value,
+                              duration: const Duration(
+                                milliseconds: 600,
+                              ));
+                        },
+                        child: Text(
+                          e.key,
+                          style: const TextStyle(
+                              color: AppColors.darkThemeprimaryColor),
+                        ),
+                      ),
+                    ),
+                  )
+                  .toList()),
+          const SizedBox(width: 12),
+        ],
+      ),
+    );
+  }
+}
 
 // class DrawerListTile extends StatelessWidget {
 //   const DrawerListTile({

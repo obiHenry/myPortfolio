@@ -97,7 +97,8 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
                                 Container(
                                   color: Colors.green,
                                   child: PageView.builder(
-                                    itemCount: PersonalDetails.skillList.length,
+                                    itemCount:
+                                        PersonalDetails.homeSkillList.length,
                                     controller: pageController,
                                     scrollBehavior: AppScrollBehavior(),
                                     itemBuilder: (context, index) => ClipPath(
@@ -107,14 +108,15 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
                                         child: Container(
                                           decoration: BoxDecoration(
                                               color: PersonalDetails
-                                                  .skillList[index].color),
+                                                  .homeSkillList[index].color),
                                           child: Column(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Image.asset(
                                                   PersonalDetails
-                                                      .skillList[index].image,
+                                                      .homeSkillList[index]
+                                                      .image,
                                                   height: 100,
                                                   width: 100,
                                                 ),
@@ -123,7 +125,8 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
                                                 ),
                                                 Text(
                                                   PersonalDetails
-                                                      .skillList[index].title,
+                                                      .homeSkillList[index]
+                                                      .title,
                                                   textAlign: TextAlign.center,
                                                   style: const TextStyle(
                                                     fontSize: 18,

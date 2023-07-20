@@ -17,7 +17,7 @@ class Experience extends StatelessWidget {
         padding: ScreenUiHelper().padding(
             context: context,
             top: 0,
-            bottom: AppScreenSizes.isSmallScreen(context) ? 50 : 120),
+            bottom: AppScreenSizes.isSmallScreen(context) ? 0.0 : 120),
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +40,7 @@ class Experience extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          ExprienceWidget(),
+          const ExprienceWidget(),
         ]);
   }
 }

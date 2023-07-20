@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Timeline extends StatelessWidget {
-  const Timeline({
+  const Timeline({super.key, 
     required this.children,
     this.indicators,
     this.isLeftAligned = true,

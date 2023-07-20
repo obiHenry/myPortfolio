@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_next/flutter_next.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:henryportfolio/constant/app_data.dart';
 import 'package:henryportfolio/constant/colorConst.dart';
 
 import '../utils/screen_helper.dart';
+import '../utils/services.dart';
 
 class FooterWidget extends StatelessWidget {
   const FooterWidget({Key? key}) : super(key: key);
@@ -20,7 +22,7 @@ class FooterWidget extends StatelessWidget {
             const Divider(
               color: AppColors.darkThemeTextSecondaryColor,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             NextContainer(children: [
@@ -43,7 +45,7 @@ class FooterWidget extends StatelessWidget {
                     const SizedBox(
                       height: 4,
                     ),
-                    const Text("kumarshashi5294@gmail.com"),
+                    const Text(PersonalDetails.email),
                     const SizedBox(
                       height: 20,
                     ),
@@ -52,25 +54,29 @@ class FooterWidget extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () =>
+                              Services().urlLauncher(SocialLinks.instagramLink),
                           icon: const Icon(
                             FontAwesomeIcons.instagram,
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () =>
+                              Services().urlLauncher(SocialLinks.twitterLink),
                           icon: const Icon(
                             FontAwesomeIcons.twitter,
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () =>
+                              Services().urlLauncher(SocialLinks.linkedinUrl),
                           icon: const Icon(
                             FontAwesomeIcons.linkedin,
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () =>
+                              Services().urlLauncher(SocialLinks.githubLink),
                           icon: const Icon(
                             FontAwesomeIcons.github,
                           ),

@@ -127,7 +127,8 @@ class _ExprienceWidgetState extends State<ExprienceWidget>
                                 ),
                               );
                             },
-                            itemCount: PersonalDetails.experienceList.length,
+                            itemCount: PersonalDetails
+                                .experienceList[i].description.length,
                           ),
                           const SizedBox(
                             height: 15,

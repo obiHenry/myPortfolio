@@ -5,13 +5,6 @@ import '../constant/colorConst.dart';
 
 class ScreenUiHelper {
   TextStyle? headline1;
-  // TextStyle? title;
-  // TextStyle? body;
-  TextStyle? buttonStyle;
-
-  double? headlineSize;
-  double? titleSize;
-  double? bodySize;
 
   TextStyle headline(BuildContext context) {
     headline1 = TextStyle(
@@ -82,27 +75,6 @@ class ScreenUiHelper {
       onPressed: () => Services().urlLauncher(url),
     );
   }
-
-  // title = TextStyle(
-  //     fontWeight: FontWeight.w600,
-  //     fontSize: titleSize,
-  //     color: AppColors.darkThemeTextPrimaryColor,
-  //     decoration: TextDecoration.none,
-  //     fontFamily: StringConstants.titleFont);
-  // buttonStyle = TextStyle(
-  //     fontFamily: StringConstants.titleFont,
-  //     decoration: TextDecoration.none,
-  //     fontWeight: FontWeight.bold,
-  //     color: AppColors.darkThemeTextPrimaryColor,
-  //     fontSize: bodySize);
-
-  // body = TextStyle(
-  //     color: textSecondaryColor,
-  //     fontWeight: FontWeight.w400,
-  //     fontSize: bodySize,
-  //     decoration: TextDecoration.none,
-  //     fontFamily: StringConstants.fontName);
-  // }
 }
 
 class AppScreenSizes {

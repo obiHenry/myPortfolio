@@ -20,7 +20,7 @@ class SkillWidget extends StatelessWidget {
       primary: false,
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: PersonalDetails.skillsList.length,
+      itemCount: PersonalDetails.aboutSkillsList.length,
       itemBuilder: (context, index) => Padding(
         padding: const EdgeInsets.symmetric(vertical: 4),
         child: Row(
@@ -35,7 +35,7 @@ class SkillWidget extends StatelessWidget {
               height: 5,
             ),
             Text(
-              PersonalDetails.skillsList[index],
+              PersonalDetails.aboutSkillsList[index],
               style: textStyle ??
                   const TextStyle(
                     color: AppColors.darkThemeTextPrimaryColor,
@@ -53,7 +53,7 @@ class SkillWidget extends StatelessWidget {
     return Container(
       // width: MediaQuery.of(context).size.width * 0.5,
       child: GridView.builder(
-        itemCount: PersonalDetails.skillsList.length,
+        itemCount: PersonalDetails.aboutSkillsList.length,
         primary: false,
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
@@ -75,11 +75,11 @@ class SkillWidget extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 0.17,
                 // height: 200,
                 child: Text(
-                  PersonalDetails.skillsList[index],
+                  PersonalDetails.aboutSkillsList[index],
                   style: textStyle ??
                       const TextStyle(
                         color: AppColors.darkThemeTextPrimaryColor,

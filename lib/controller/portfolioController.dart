@@ -10,7 +10,12 @@ class PortfolioController extends GetxController {
 
 // text editing controllers
 
-  final reviewNameController = TextEditingController();
+  final nameController = TextEditingController();
+  final emailController = TextEditingController();
+
+  final subjectController = TextEditingController();
+
+  final messageController = TextEditingController();
 
   updateStoreName(String name) {
     storeName(name);

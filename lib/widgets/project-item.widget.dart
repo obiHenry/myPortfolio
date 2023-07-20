@@ -1,5 +1,6 @@
 import 'package:flutter_next/flutter_next.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:henryportfolio/constant/colorConst.dart';
 import 'package:henryportfolio/models/project_model.dart';
 import 'package:henryportfolio/utils/screen_helper.dart';
@@ -80,7 +81,7 @@ class _ProjectItemWidgetState extends State<ProjectItemWidget>
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Icon(
-                              Icons.folder_outlined,
+                              FontAwesomeIcons.folder,
                               color: isHovered
                                   ? Colors.black
                                   : AppColors.darkThemeprimaryColor,
@@ -93,22 +94,29 @@ class _ProjectItemWidgetState extends State<ProjectItemWidget>
                                   const SizedBox()
                                 else
                                   ScreenUiHelper().iconButton(
-                                      icon: Icons.link_outlined,
+                                      icon: FontAwesomeIcons.link,
                                       url: widget.project.websiteLink,
                                       isHovered: isHovered),
                                 if (widget.project.githubLink == null)
                                   const SizedBox()
                                 else
                                   ScreenUiHelper().iconButton(
-                                      icon: Icons.hub_outlined,
+                                      icon: FontAwesomeIcons.github,
                                       url: widget.project.githubLink!,
                                       isHovered: isHovered),
                                 if (widget.project.playstoreLink == null)
                                   const SizedBox()
                                 else
                                   ScreenUiHelper().iconButton(
-                                      icon: Icons.play_arrow_outlined,
+                                      icon: FontAwesomeIcons.googlePlay,
                                       url: widget.project.playstoreLink,
+                                      isHovered: isHovered),
+                                if (widget.project.appstoreLink == null)
+                                  const SizedBox()
+                                else
+                                  ScreenUiHelper().iconButton(
+                                      icon: FontAwesomeIcons.appStore,
+                                      url: widget.project.appstoreLink,
                                       isHovered: isHovered),
                               ],
                             ),
@@ -150,7 +158,7 @@ class _ProjectItemWidgetState extends State<ProjectItemWidget>
                           textAlign: TextAlign.start,
                         ),
 
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
 

@@ -44,7 +44,7 @@ class _AboutPageState extends State<AboutPage> {
             crossAxisAlignment: WrapCrossAlignment.start,
             horizontalAlignment: WrapAlignment.start,
             verticalAlignment: WrapAlignment.center,
-            padding: EdgeInsets.only(top: 40),
+            padding: const EdgeInsets.only(top: 40),
             children: [
               NextCol(
                 sizes: 'col-12 col-md-6 col-sm-12',

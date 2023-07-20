@@ -2,6 +2,7 @@ class ProjectModel {
   final String? githubLink;
   final String? websiteLink;
   final String? playstoreLink;
+  final String? appstoreLink;
   final String title;
   final String description;
   final List<String> tools;
@@ -12,6 +13,7 @@ class ProjectModel {
       {this.githubLink,
       this.websiteLink,
       this.playstoreLink,
+      this.appstoreLink,
       required this.title,
       required this.description,
       required this.tools,

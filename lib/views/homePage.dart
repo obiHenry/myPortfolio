@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:henryportfolio/constant/app_data.dart';
 import 'package:henryportfolio/constant/colorConst.dart';
 import 'package:henryportfolio/utils/screen_helper.dart';
+import 'package:henryportfolio/utils/services.dart';
 import 'package:henryportfolio/widgets/custom_skill_design.dart';
 
 import '../widgets/custom_text.dart';
@@ -72,7 +73,8 @@ class HomePage extends StatelessWidget {
 
                 NextButton(
                   borderRadius: BorderRadius.circular(5),
-                  onPressed: () {},
+                  onPressed: () =>
+                      Services().urlLauncher(SocialLinks.whatsappLink),
                   color: AppColors.darkThemeBackgroundColor,
                   variant: NextButtonVariant.outlined,
                   child: const Padding(

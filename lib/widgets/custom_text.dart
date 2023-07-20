@@ -18,7 +18,6 @@ class CustomText extends StatelessWidget {
 
       text.split(', ').forEach((element) {
         if (element.startsWith('[') && element.endsWith(']')) {
-          print(element);
           String key = element[1];
           String text = element
               .substring(3, element.length - 1)
