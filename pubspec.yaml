@@ -49,6 +49,10 @@ dependencies:
   url_launcher: ^6.1.12
   flutter_screenutil: ^5.8.4 
   url_strategy: ^0.2.0 
+  avatar_glow:
+    git:
+      url: https://github.com/apgapg/avatar_glow
+      ref: master
 
 
 dev_dependencies:

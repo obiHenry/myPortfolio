@@ -40,10 +40,10 @@ class ContactScreen extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                const ContactListTile(
-                    title: 'Location:',
-                    subtitle: PersonalDetails.location,
-                    leadingIcon: FontAwesomeIcons.locationArrow),
+                // const ContactListTile(
+                //     title: 'Location:',
+                //     subtitle: PersonalDetails.location,
+                //     leadingIcon: FontAwesomeIcons.locationArrow),
                 const ContactListTile(
                     title: 'Email:',
                     subtitle: PersonalDetails.email,

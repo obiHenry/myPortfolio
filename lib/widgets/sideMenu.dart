@@ -3,6 +3,7 @@ import 'package:henryportfolio/models/dashBoard.view_model.dart';
 
 import '../constant/app_data.dart';
 import '../constant/colorConst.dart';
+import '../utils/services.dart';
 
 // ignore: must_be_immutable
 class SideMenu extends StatefulWidget {
@@ -33,10 +34,15 @@ class _SideMenuState extends State<SideMenu> {
             decoration: const BoxDecoration(
                 border:
                     Border(bottom: BorderSide(color: Colors.grey, width: 1))),
-            child: Image.asset(
-              PersonalDetails.logoImage,
-              height: 100,
-              width: 100,
+            child: InkWell(
+              onTap: () => Services().showAlertDialog(context),
+              child: const CircleAvatar(
+                radius: 20.0,
+                backgroundImage: AssetImage(
+                  PersonalDetails.logoImage,
+                ),
+                backgroundColor: Colors.transparent,
+              ),
             ),
           ),
           Column(

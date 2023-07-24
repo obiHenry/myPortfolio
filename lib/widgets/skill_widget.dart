@@ -58,7 +58,7 @@ class SkillWidget extends StatelessWidget {
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            childAspectRatio: 5, crossAxisCount: 2),
+            childAspectRatio: 8, crossAxisCount: 2),
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.only(
             top: 4,

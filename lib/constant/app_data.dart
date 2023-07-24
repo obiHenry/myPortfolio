@@ -11,17 +11,17 @@ mixin SystemProperties {
 }
 
 mixin PersonalDetails {
-  static const logoImage = 'assets/images/business.png';
+  static const logoImage = 'assets/images/profile.jpg';
 
   static const List<String> shortIntro = [
     'A Full stack developer who specializes in building efficient cross platform flutter application.',
     'Also skilled in working effectively both as a team (under close scrutiny), and a "lone ranger" (with no one breathing under my neck)',
     'Because of my keen "attention-to-details" and "never-quit-mentality", I see every project to fruition.',
-    'Finally I am always learning and striving to be better. If you think we are a fit, clcik on the "Get In Touch" button below let us chat.'
+    'Finally I am always learning and striving to be better. If you think we are a fit, click on the "Get In Touch" button below let us chat.'
   ];
 
   static const String intro =
-      "I started my career into software developement as android developer in 2018. I enrolled for an internship where I learnt about programming in general, learnt and built first android applications in native android, the internship lasted for 6 months. after that i continued building and exploring on my own, until Later in 2020 I heard about flutter which helps in building cross platform applications. After researching about flutter, I applied for an internship and got to learn and work for a full year, through which I was able to learn communication skills and code architectures and built a shopping clothing app together with my team for the comapny at the end of the internship. After that I worked as a freelancer for various persons and company until now, I gained experience of how to build applications in production level. I also learnt web basis like HTML, CSS and Javascript along the way. Presently I'm focusing on backend developement. I learnt how to create API using spring boot, And working ProjectModels on it. I'm currently learning SQL and postgreSQL.";
+      "I started my career into software developement as android developer in 2018. I enrolled for an internship where I learnt about programming in general, learnt and built first android applications in native android, the internship lasted for 6 months. after that i continued building and exploring on my own, until Later in 2020 I heard about flutter which helps in building cross platform applications. After researching about flutter, I applied for an internship and got to learn and work for a full year, through which I was able to learn communication skills and code architectures and built a shopping clothing app together with my team for the comapny at the end of the internship. After that I worked as a freelancer for various persons and company until now, I gained experience of how to build applications in production level. I also learnt web basis like HTML, CSS and Javascript along the way. Presently I'm focusing on backend developement. I learnt how to create API using spring boot, and working ProjectModels on it. I'm currently learning SQL and postgreSQL.";
 
   static List<Skill> homeSkillList = <Skill>[
     Skill(
@@ -49,7 +49,7 @@ mixin PersonalDetails {
   static const List<String> aboutSkillsList = [
     'Flutter',
     'REST API with spring boot',
-    'SQL/postgresql in Progress',
+    'SQL/postgreSQL in Progress',
     'Android Developer',
     'Git',
     'Firebase',

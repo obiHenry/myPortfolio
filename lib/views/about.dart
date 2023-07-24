@@ -69,7 +69,7 @@ class _AboutPageState extends State<AboutPage> {
                         style: ScreenUiHelper().body(context).copyWith(
                             // wordSpacing: 2,
                             // letterSpacing: 1.5,
-                            fontSize: 16,
+                            fontSize: 15,
                             color: AppColors.darkThemeTextPrimaryColor)),
                     const SizedBox(
                       height: 25,
@@ -160,11 +160,11 @@ class _AboutPageState extends State<AboutPage> {
                                 year: EducationDetails.secondaryTimeline,
                                 percentage:
                                     EducationDetails.secondaryPercentage),
-                            EducationDetailsTimelineWidget(
-                                name: EducationDetails.primaryName,
-                                stream: EducationDetails.primaryStream,
-                                year: EducationDetails.primaryTimeline,
-                                percentage: EducationDetails.primaryPercentage),
+                            // EducationDetailsTimelineWidget(
+                            //     name: EducationDetails.primaryName,
+                            //     stream: EducationDetails.primaryStream,
+                            //     year: EducationDetails.primaryTimeline,
+                            //     percentage: EducationDetails.primaryPercentage),
                           ])
                     ],
                   ),
