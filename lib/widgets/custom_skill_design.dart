@@ -1,14 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_next/flutter_next.dart';
 import 'package:henryportfolio/widgets/painters/triangle.painter.dart';
 
 import '../constant/app_data.dart';
 
 class CustomSkillDesignWidget extends StatefulWidget {
-  const CustomSkillDesignWidget({
-    Key? key,
-  }) : super(key: key);
+  const CustomSkillDesignWidget({Key? key}) : super(key: key);
 
   @override
   State<CustomSkillDesignWidget> createState() =>
@@ -21,6 +18,7 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
   late AnimationController fadeController;
   int index = 0;
   final PageController pageController = PageController();
+
   @override
   void initState() {
     super.initState();
@@ -58,8 +56,8 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
     double radius = 300;
     double smallRadius = 24;
     return SizedBox(
-        height: context.height * 0.5 -
-            (context.themeData.appBarTheme.toolbarHeight ?? 0),
+        height: MediaQuery.of(context).size.height * 0.5 -
+            (Theme.of(context).appBarTheme.toolbarHeight ?? 0),
         child: Center(
           child: SizedBox(
             height: radius,
@@ -120,9 +118,7 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
                                                   height: 100,
                                                   width: 100,
                                                 ),
-                                                const SizedBox(
-                                                  height: 8,
-                                                ),
+                                                const SizedBox(height: 8),
                                                 Text(
                                                   PersonalDetails
                                                       .homeSkillList[index]
@@ -137,9 +133,6 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
                                         ),
                                       ),
                                     ),
-                                    // options: CarouselOptions(
-                                    //   autoPlay: true,
-                                    // ),
                                   ),
                                 ),
                                 Positioned(
@@ -178,7 +171,7 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
                                                   child: const Center()),
                                             ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -218,7 +211,7 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
                                                 child: const Center()),
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 )),
@@ -230,32 +223,27 @@ class _CustomSkillDesignWidgetState extends State<CustomSkillDesignWidget>
                 ),
                 Positioned(
                     top: 0,
-                    left: (radius - (smallRadius)) / 2,
-                    child: smallCircle(
-                      smallRadius,
-                    )),
+                    left: (radius - smallRadius) / 2,
+                    child: smallCircle(smallRadius)),
                 Positioned(
                     left: 0,
-                    top: (radius - (smallRadius)) / 2,
-                    child: smallCircle(
-                      smallRadius,
-                    )),
+                    top: (radius - smallRadius) / 2,
+                    child: smallCircle(smallRadius)),
                 Positioned(
                     right: 0,
-                    top: (radius - (smallRadius)) / 2,
-                    child: smallCircle(
-                      smallRadius,
-                    ).onTap(() {
-                      pageController.nextPage(
-                          duration: const Duration(milliseconds: 400),
-                          curve: Curves.linear);
-                    })),
+                    top: (radius - smallRadius) / 2,
+                    child: GestureDetector(
+                      onTap: () {
+                        pageController.nextPage(
+                            duration: const Duration(milliseconds: 400),
+                            curve: Curves.linear);
+                      },
+                      child: smallCircle(smallRadius),
+                    )),
                 Positioned(
                     bottom: 0,
-                    left: (radius - (smallRadius)) / 2,
-                    child: smallCircle(
-                      smallRadius,
-                    )),
+                    left: (radius - smallRadius) / 2,
+                    child: smallCircle(smallRadius)),
               ],
             ),
           ),
@@ -286,6 +274,6 @@ class AppScrollBehavior extends MaterialScrollBehavior {
         PointerDeviceKind.mouse,
         PointerDeviceKind.touch,
         PointerDeviceKind.stylus,
-        PointerDeviceKind.unknown
+        PointerDeviceKind.unknown,
       };
 }

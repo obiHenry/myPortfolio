@@ -14,14 +14,11 @@ mixin PersonalDetails {
   static const logoImage = 'assets/images/profile.jpg';
 
   static const List<String> shortIntro = [
-    'A Full stack developer who specializes in building efficient cross platform flutter application.',
-    'Also skilled in working effectively both as a team (under close scrutiny), and a "lone ranger" (with no one breathing under my neck)',
-    'Because of my keen "attention-to-details" and "never-quit-mentality", I see every project to fruition.',
-    'Finally I am always learning and striving to be better. If you think we are a fit, click on the "Get In Touch" button below let us chat.'
+    'Senior Flutter Developer with 7+ years building production iOS and Android apps — including 4+ years specializing in cross-platform Flutter development.',
+    'I\'ve led end-to-end mobile architecture for real-time, security-sensitive apps — from clean architecture design to CI/CD pipelines that catch bugs before users ever see them.',
+    'I care about the details most developers skip: error handling that never crashes silently, verification flows that are actually secure, and code that holds up at scale — not just in the demo.',
+    'Currently open to senior Flutter roles, remote or hybrid. Take a look at what I\'ve built below, or jump straight to Get In Touch — I\'d love to talk.',
   ];
-
-  static const String intro =
-      "I started my career into software developement as android developer in 2018. I enrolled for an internship where I learnt about programming in general, learnt and built first android applications in native android, the internship lasted for 6 months. after that i continued building and exploring on my own, until Later in 2020 I heard about flutter which helps in building cross platform applications. After researching about flutter, I applied for an internship and got to learn and work for a full year, through which I was able to learn communication skills and code architectures and built a shopping clothing app together with my team for the comapny at the end of the internship. After that I worked as a freelancer for various persons and company until now, I gained experience of how to build applications in production level. I also learnt web basis like HTML, CSS and Javascript along the way. Presently I'm focusing on backend developement. I learnt how to create API using spring boot, and working ProjectModels on it. I'm currently learning SQL and postgreSQL.";
 
   static List<Skill> homeSkillList = <Skill>[
     Skill(
@@ -46,230 +43,209 @@ mixin PersonalDetails {
     )
   ];
 
+  static const String intro =
+      "I'm a Flutter developer with 7+ years in software development, including 4+ years specializing in cross-platform mobile apps. I started as an Android developer in 2018, building native apps during a 6-month internship before discovering Flutter in 2020. After a year-long internship building a production shopping app, I transitioned to freelance and contract work — building apps for clients and companies across e-commerce, delivery, and fintech use cases. Along the way I picked up backend fundamentals (Spring Boot, REST APIs, SQL) to better understand the full system my apps connect to — but Flutter and mobile architecture remain where I focus and specialize. I'm currently building production apps with Clean Architecture, Riverpod/BLoC state management, and CI/CD pipelines, with a particular focus on secure, real-time mobile experiences.";
+
   static const List<String> aboutSkillsList = [
-    'Flutter',
-    'REST API with spring boot',
-    'SQL/postgreSQL in Progress',
-    'Android Developer',
-    'Git',
+    'Flutter & Dart',
+    'Clean Architecture',
+    'Riverpod / BLoC',
     'Firebase',
-    'Java',
-    'OOPS',
-    'Html',
-    'Css',
-    'Java script',
-    'Problem Solving',
-    'DSA'
+    'REST API Integration',
+    'CI/CD (GitHub Actions)',
+    'Git & Version Control',
+    'Android (Native/Java)',
+    'Spring Boot (REST APIs)',
+    'SQL / PostgreSQL',
+    'HTML / CSS / JavaScript',
+    'Problem Solving & DSA',
   ];
 
   static List<FeaturedSkillModel> featuredSkills = [
-    FeaturedSkillModel(name: 'Mobile Application Developement', percent: 95),
-    FeaturedSkillModel(name: 'Backend Developer', percent: 65),
-    FeaturedSkillModel(name: 'Web Developer', percent: 50),
+    FeaturedSkillModel(name: 'Flutter / Mobile Development', percent: 95),
+    FeaturedSkillModel(
+        name: 'Clean Architecture & State Management', percent: 90),
+    FeaturedSkillModel(
+        name: 'API Integration & Backend Fundamentals', percent: 75),
   ];
 
   static List<ProjectModel> projectsList = [
     ProjectModel(
       id: '0',
       type: ['Application'],
-      title: 'E Meet',
-      githubLink: 'https://github.com/obiHenry/E_meet',
+      title: 'HutDrop',
+      appstoreLink: 'https://apps.apple.com/us/app/hutdrop-store/id6762197903',
+      playstoreLink:
+          'https://play.google.com/store/apps/details?id=com.greylynx.hutdropForRiders',
       description:
-          'Created a social media app with android native where you can post, add friends, follow, unfollow, like, comment and chat with friends just like facebook.',
+          'A Nigerian delivery platform with merchant and rider-facing apps. Supports the full real-time order lifecycle — notification, confirmation, preparation, pickup, and delivery — with live GPS tracking visible to merchants and customers simultaneously.',
       tools: [
-        'Java',
+        'Flutter',
         'Firebase',
-        'Android Native',
+        'Google Maps SDK',
+        'FCM',
+        'GitHub Actions'
       ],
+      role:
+          'Co-founded HutDrop and led end-to-end development of both apps, from architecture through App Store and Play Store deployment.',
+      challenge:
+          'Built an event-driven real-time order system, engineered OTP-based secure pickup verification, and set up a CI/CD pipeline with automated tests so every release ships with confidence.',
     ),
     ProjectModel(
-        id: '1',
-        type: ['Application'],
-        title: 'Readers_pub_book',
-        githubLink: 'https://github.com/obiHenry/Readers_pub_book',
-        description:
-            'A book  application similar to dreams built with android native  where users can come and read books available on the app, save to favourite and add to library has admin panel the owner adds these books her self',
-        tools: [
-          'Java',
-          'Firebase',
-          'Android Native',
-        ]),
+      id: '1',
+      type: ['Application'],
+      title: 'Behaviour Buddy',
+      playstoreLink:
+          'https://play.google.com/store/apps/details?id=com.exodussolutions.behaviorbuddy',
+      appstoreLink:
+          'https://apps.apple.com/us/app/behaviour-buddy/id6499356065',
+      description:
+          'A child-focused behavior and rewards app with separate user and admin interfaces, designed around onboarding, missions, and reward flows for young users.',
+      tools: ['Flutter', 'BLoC/Provider'],
+      role:
+          'Led UI/UX design and development, working with cross-functional stakeholders to deliver pixel-perfect, responsive interfaces. Mentored junior contributors on Flutter architecture and state management.',
+      challenge:
+          'Applied child-friendly design principles — color theory, typography, simplified navigation — to make complex flows usable for young children.',
+    ),
     ProjectModel(
-        id: '2',
-        type: ['Application'],
-        title: 'Expense_planner',
-        githubLink: 'https://github.com/obiHenry/Expense_planner',
-        description:
-            'Created a flutter app  for planning all expenses made in a week or month depends on how you want to calculate either weekly, monthly or yearly.',
-        tools: ['Flutter']),
+      id: '2',
+      type: ['Application'],
+      playstoreLink:
+          'https://play.google.com/store/apps/details?id=com.app.syticks&pli=1',
+      title: 'Syticks',
+      appstoreLink:
+          'https://apps.apple.com/ng/app/syticks-for-businesses/id1663739558',
+      description:
+          'A multi-category ticketing platform supporting events, cinema, and bus ticketing, with an in-app wallet for secure payments and a location-aware event discovery feature.',
+      tools: ['Flutter', 'REST API', 'In-app Wallet'],
+      role:
+          'Engineered the RESTful network layer and built the secure-by-design payment architecture within a 4-person Agile team.',
+      challenge:
+          'Shipped with 0 post-release crashes across 104 installs at first deployment, including a 0% crash rate across all payment flows.',
+    ),
     ProjectModel(
-        id: '3',
-        type: ['Application'],
-        title: 'Cloth Shopping App',
-        websiteLink:
-            'https://drive.google.com/file/d/11JAoRkg5avM5rI_BhOxncPE8ZqY2oZsb/view?usp=drivesdk',
-        description:
-            'Flutter Application used to buy customized cloths online, you can select design you want from the app and give your measurement on the app, then place an order, then the order will be taken and delivered to you within the time stated on the app',
-        tools: [
-          'Flutter',
-          'Firebase',
-        ]),
+      id: '3',
+      type: ['Application'],
+      title: 'Corps Rapport Exchange',
+      appstoreLink:
+          'https://apps.apple.com/ng/app/corps-rapport-exchange/id6446414458',
+      playstoreLink:
+          'https://play.google.com/store/apps/details?id=com.magma.corpsrapport',
+      description:
+          'A networking app built for an organization, allowing users to exchange contact information instantly via NFC and barcode scanning — functioning as a digital business card.',
+      tools: ['Flutter', 'Firebase', 'NFC'],
+      role:
+          'Built the app independently for the client, integrating Firebase services and native NFC functionality.',
+      challenge:
+          'Implemented NFC hardware integration beyond standard Flutter plugins, and built a custom iOS home screen widget displaying a generated barcode for quick access.',
+    ),
     ProjectModel(
-        id: '4',
-        type: ['Application'],
-        title: 'My final project',
-        websiteLink:
-            'https://drive.google.com/file/d/1JQM-idm9O83mqKIIUm4U1cTPYsfDSZaJ/view?usp=drivesdk',
-        description:
-            'Created a simple application to record students id card to avoid loss and easy retrieval when needed.',
-        tools: [
-          'Flutter',
-          'Node Js',
-          'Mongo DB',
-        ]),
-    ProjectModel(
-        id: '5',
-        type: ['Application'],
-        title: 'The adventures of Muna',
-        playstoreLink:
-            'https://play.google.com/store/apps/details?id=com.safetychic.aom',
-        appstoreLink:
-            'https://apps.apple.com/ng/app/the-adventures-of-muna/id1633517832',
-        description:
-            'The Adventures of Muna is a child safety education game designed to teach children different safety topics in a fun and memorable way. It leverages simple safety messaging, audiovisual features, problem-solving training, and an African representation to present complex safety knowledge in a way that children will learn and remember',
-        tools: ['flutter', 'Firebase']),
-    ProjectModel(
-        id: '6',
-        type: ['Application'],
-        title: 'Social Exchange',
-        appstoreLink:
-            'https://apps.apple.com/ng/app/corps-rapport-exchange/id6446414458',
-        playstoreLink:
-            'https://play.google.com/store/apps/details?id=com.magma.corpsrapport',
-        description:
-            'I created this app for an organisation, It\'s a flutter application created for exchanging information using nfc and and barcode scanning, can be used to form business cards too.',
-        tools: [
-          'Flutter',
-          'Firebase',
-        ]),
-    ProjectModel(
-        id: '7',
-        type: ['Website'],
-        title: 'Syticks',
-        appstoreLink:
-            'https://apps.apple.com/ng/app/syticks-for-businesses/id1663739558',
-        description:
-            'Application which is used to create tickets for events and allows audience to buy ticket from the app, after events organisers can withdraw the funds they made.',
-        tools: ['Flutter', 'Java', 'API']),
-    ProjectModel(
-        id: '8',
-        type: ['Website'],
-        title: 'springboot-webapp',
-        githubLink: 'https://github.com/obiHenry/springboot-webapp',
-        description: 'Created a spring boot web app for inventory.',
-        tools: ['Java', 'Springboot']),
-    ProjectModel(
-        id: '9',
-        type: ['Backend'],
-        githubLink: 'https://github.com/obiHenry/api-configuration',
-        description:
-            'created API for social media app for user creation and posts',
-        title: 'Social media API creation',
-        tools: ['Java', 'Spring boot', 'h2-database']),
-    ProjectModel(
-        id: '10',
-        type: ['Website'],
-        title: 'Portfolio',
-        githubLink: 'https://github.com/obiHenry/myPortfolio',
-        description:
-            'Created portfolio using flutter,Supports for mac os,windows,linux,web,ios,android',
-        tools: [
-          'Flutter',
-        ])
+      id: '4',
+      type: ['Application'],
+      title: 'The Adventures of Muna',
+      playstoreLink:
+          'https://play.google.com/store/apps/details?id=com.safetychic.aom',
+      appstoreLink:
+          'https://apps.apple.com/ng/app/the-adventures-of-muna/id1633517832',
+      description:
+          'A child safety education game teaching safety topics through interactive storytelling, gamified quizzes, and progress tracking — published on both the App Store and Play Store.',
+      tools: ['Flutter', 'Firebase Realtime Database'],
+      role:
+          'Designed and implemented the full app UI from scratch, including gamified quiz modules and performance tracking.',
+      challenge:
+          'Built an engaging, memorable safety-education experience for children using audiovisual storytelling and African representation.',
+    ),
   ];
 
   static const List<ExperienceModel> experienceList = [
     ExperienceModel(
-        title: 'IDK',
-        position: 'Internship',
-        timePeriod: 'AUG 2018 - JAN 2019',
-        description: [
-          'Worked as an intern for mobile app developement and front end developer',
-          'I conducted  trial runs of program to be sure they produced reauired ressult',
-          'I learnt how to style texts and organise an xml file ',
-          'Added Functionality to customize text styling dynamically'
-        ],
-        tools: [
-          'Android studio',
-          'Java',
-          'MySQL',
-        ]),
-    ExperienceModel(
-      tools: [
-        'Firebase',
-        'Flutter',
-      ],
-      timePeriod: 'AUG 2020 - MAR 2021',
-      title: 'Customized Native',
-      position: 'Internship',
+      title: 'HutDrop',
+      position: 'Co-Founder & Senior Flutter Developer',
+      timePeriod: 'JUN 2025 - PRESENT',
       description: [
-        'Managing a team of 4 as scrum master',
-        'Built the the clothing admin section',
-        'Handled the whole clude involved in the admin section',
-        'Integrated Payment Gateway Integration (Flutterwave)',
-        'Implemented Video Broadcasting feature,',
+        'Co-founded a Nigerian delivery platform and led end-to-end Flutter development of two cross-platform apps — merchant and rider — from architecture through App Store and Play Store deployment.',
+        'Designed and implemented the full real-time order lifecycle — notification, confirmation, preparation, pickup, and delivery — using asynchronous event-driven architecture.',
+        'Configured a GitHub Actions CI/CD pipeline for automated build, test, and deployment to both app stores.',
+        'Engineered OTP authentication and a secure pickup verification system, applying secure development lifecycle (SDL) principles to protect order handoff.',
+        'Integrated Google Maps SDK for live rider tracking, visible in real time to both merchant and customer.',
+        'Implemented FCM push notifications across foreground, background, and terminated app states.',
+      ],
+      tools: [
+        'Flutter',
+        'Firebase',
+        'Google Maps SDK',
+        'FCM',
+        'GitHub Actions',
+        'OTP Auth'
       ],
     ),
     ExperienceModel(
-        title: 'Safety chick',
-        position: 'Freelancer',
-        timePeriod: 'APR 2022 - JUL 2022',
-        description: [
-          'Developed UI for safety chic app and developed mobile application',
-          'Worked with a team member to Designed game ui section',
-          'Designed College Application to create quiz for different batches',
-          'worked with firebase to create user accounts'
-        ],
-        tools: [
-          'Flutter',
-          'Firebase',
-          'Figma',
-        ]),
-    ExperienceModel(
-        title: 'Syticks',
-        position: 'Mobile App Developer',
-        timePeriod: 'May 2022 - Till date',
-        description: [
-          'Worked collaboratively with designer and backend developer to bring mobile app to life',
-          'Developed UI for application similar to doubtnut',
-          'Created frontend section to request withdrawal after 24 hours ',
-          'Added account submission page',
-          'Designed UI for displaying past and present events.',
-        ],
-        tools: [
-          'Flutter',
-          'Figma',
-          'API',
-        ]),
-    ExperienceModel(
-      tools: ['Firebase', 'Flutter', 'NFC', 'Figma', 'Firebase dynamic link'],
-      timePeriod: 'FEB 2023 - Till date',
-      title: 'Corps Rapport',
-      position: 'Mobile App Developer',
+      title: 'Behaviour Buddy',
+      position: 'Senior Flutter Developer',
+      timePeriod: 'MAY 2024 - JUN 2025',
       description: [
-        'Developed and designed the whole app',
-        'Implemented NFC feature for scanning information stored on the card',
-        'Integrated bar code scanning to get information',
-        'Implemented deeplinking using firebase dynamic links',
-        'implemented share function used to share user information and save the contacts '
+        'Led UI/UX design and development for user and admin interfaces, collaborating with cross-functional stakeholders to deliver pixel-perfect, responsive Flutter UIs for iOS and Android.',
+        'Provided technical guidance to junior contributors on Flutter architecture patterns and state management.',
+        'Applied child-friendly design principles — color theory, typography, simplified navigation — across onboarding, missions, and rewards flows.',
       ],
+      tools: ['Flutter', 'BLoC', 'Provider'],
+    ),
+    ExperienceModel(
+      title: 'Syticks',
+      position: 'Senior Flutter Developer',
+      timePeriod: 'APR 2023 - PRESENT',
+      description: [
+        'Engineered the RESTful network layer for a multi-category ticketing platform, achieving 0 post-release crashes across 104 installs at first deployment.',
+        'Implemented secure-by-design payment architecture with an in-app wallet, maintaining a 0% crash rate across all payment flows.',
+        'Delivered a location-aware event discovery feature and organiser management interface, validated with zero defects on release.',
+        'Architected a scalable, data-driven app supporting multiple event categories, including cinema and bus ticketing.',
+      ],
+      tools: ['Flutter', 'REST API', 'In-app Wallet'],
+    ),
+    ExperienceModel(
+      title: 'Corps Rapport Exchange',
+      position: 'Flutter Developer',
+      timePeriod: 'FEB 2023 - MAY 2024',
+      description: [
+        'Integrated Firebase services (Firestore, Auth, Analytics) and implemented NFC technology for secure, seamless peer-to-peer information exchange.',
+        'Configured deep linking and barcode scanning, and developed a custom iOS home screen widget displaying a generated barcode for quick access.',
+      ],
+      tools: ['Flutter', 'Firebase', 'NFC', 'Deep Linking'],
+    ),
+    ExperienceModel(
+      title: 'The Adventures of Muna',
+      position: 'Flutter Developer',
+      timePeriod: 'APR 2022 - JUL 2022',
+      description: [
+        'Designed and implemented the full educational app UI from scratch, with Firebase Realtime Database, gamified quiz modules, and performance tracking.',
+      ],
+      tools: ['Flutter', 'Firebase Realtime Database'],
+    ),
+    ExperienceModel(
+      title: 'Customized Native School',
+      position: 'Flutter Developer',
+      timePeriod: 'AUG 2020 - DEC 2021',
+      description: [
+        'Built an admin panel in Flutter integrating Firebase (Firestore, Storage, Auth) for real-time clothing catalog management, including image uploads and input validation.',
+      ],
+      tools: ['Flutter', 'Firebase'],
+    ),
+    ExperienceModel(
+      title: 'Integrated Development Konsult',
+      position: 'Android Developer Intern',
+      timePeriod: 'AUG 2018 - JAN 2019',
+      description: [
+        'Enhanced UI elements and built responsive XML layouts for native Android applications.',
+        'Participated in structured code reviews, applying team standards to maintain code quality.',
+      ],
+      tools: ['Android Studio', 'Java'],
     ),
   ];
   static const String email = 'obihenry578@gmail.com';
   static const String location =
       'Government house street, Anambra State, Nigeria';
 
-  static const String call = '+2349056016875';
+  static const String call = '+2348130698353';
 }
 
 mixin EducationDetails {
@@ -298,7 +274,7 @@ mixin SocialLinks {
   static const String githubLink = 'https://github.com/obihenry';
   static const String facebookLink =
       'https://www.facebook.com/obi.henry.796?mibextid=ZbWKwL';
-  static const String whatsappLink = 'https://wa.me/9056016875';
+  static const String whatsappLink = 'https://wa.me/8130698353';
   static const String instagramLink =
       'https://instagram.com/obi_henry_?igshid=MzNlNGNkZWQ4Mg==';
 }

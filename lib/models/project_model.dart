@@ -8,6 +8,8 @@ class ProjectModel {
   final List<String> tools;
   final String id;
   final List<String> type;
+  final String? role;
+  final String? challenge;
 
   ProjectModel(
       {this.githubLink,
@@ -18,5 +20,7 @@ class ProjectModel {
       required this.description,
       required this.tools,
       required this.id,
-      required this.type});
+      required this.type,
+      this.role,
+      this.challenge});
 }

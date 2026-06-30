@@ -70,7 +70,11 @@ class ScreenUiHelper {
     return IconButton(
       icon: Icon(
         icon,
-        color: isHovered ? Colors.black : AppColors.darkThemeprimaryColor,
+        color:
+
+            //  isHovered ? Colors.black :
+
+            AppColors.darkThemeprimaryColor,
       ),
       onPressed: () => Services().urlLauncher(url),
     );

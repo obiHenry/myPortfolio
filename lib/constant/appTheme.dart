@@ -22,13 +22,13 @@ class Themes {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-          textStyle: MaterialStateProperty.all(const TextStyle(
+          textStyle: WidgetStateProperty.all(const TextStyle(
               color: Colors.white, fontSize: 14, fontWeight: FontWeight.w300)),
           animationDuration: const Duration(milliseconds: 800),
-          shadowColor: MaterialStateProperty.all(Colors.black),
-          shape: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.hovered) ||
-                states.contains(MaterialState.focused)) {
+          shadowColor: WidgetStateProperty.all(Colors.black),
+          shape: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.hovered) ||
+                states.contains(WidgetState.focused)) {
               return const RoundedRectangleBorder();
             }
             return const RoundedRectangleBorder(
@@ -37,13 +37,13 @@ class Themes {
               ),
             );
           }),
-          padding: MaterialStateProperty.all(
+          padding: WidgetStateProperty.all(
             const EdgeInsets.symmetric(
               horizontal: 25,
               vertical: 20,
             ),
           ),
-          backgroundColor: MaterialStateProperty.all(
+          backgroundColor: WidgetStateProperty.all(
             AppColors.lightThemeBtnColor,
           )),
     ),
@@ -77,16 +77,16 @@ class Themes {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-            elevation: MaterialStateProperty.all(BorderSide.strokeAlignOutside),
-            textStyle: MaterialStateProperty.all(const TextStyle(
+            elevation: WidgetStateProperty.all(BorderSide.strokeAlignOutside),
+            textStyle: WidgetStateProperty.all(const TextStyle(
                 color: AppColors.darkThemeTextPrimaryColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w300)),
             animationDuration: const Duration(milliseconds: 800),
-            shadowColor: MaterialStateProperty.all(Colors.black),
-            shape: MaterialStateProperty.resolveWith((states) {
-              if (states.contains(MaterialState.hovered) ||
-                  states.contains(MaterialState.focused)) {
+            shadowColor: WidgetStateProperty.all(Colors.black),
+            shape: WidgetStateProperty.resolveWith((states) {
+              if (states.contains(WidgetState.hovered) ||
+                  states.contains(WidgetState.focused)) {
                 return const RoundedRectangleBorder();
               }
               return const RoundedRectangleBorder(
@@ -95,13 +95,13 @@ class Themes {
                 ),
               );
             }),
-            padding: MaterialStateProperty.all(
+            padding: WidgetStateProperty.all(
               const EdgeInsets.symmetric(
                 horizontal: 25,
                 vertical: 20,
               ),
             ),
-            backgroundColor: MaterialStateProperty.all(
+            backgroundColor: WidgetStateProperty.all(
               AppColors.darkThemeExperienceDesktopBackground,
             )),
       ),

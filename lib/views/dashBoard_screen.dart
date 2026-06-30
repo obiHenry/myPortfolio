@@ -43,6 +43,8 @@ class _DashBoardState extends State<DashBoard> {
               scaffoldKey: scaffoldKey,
             ),
             appBar: AppBar(
+              leadingWidth: 400,
+              leading: const LogoComponent(),
               actions: <Widget>[
                 AppScreenSizes.isSmallScreen(context)
                     ? IconButton(
@@ -90,8 +92,6 @@ class _DashBoardState extends State<DashBoard> {
                                 .toList()),
                       ),
               ],
-              leadingWidth: 400,
-              leading: const LogoComponent(),
             ),
             // backgroundColor: ColorConfigs.backgroundColor,
             body: ScrollablePositionedList.builder(
