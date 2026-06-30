@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:henryportfolio/constant/app_data.dart';
+import 'package:henryportfolio/constant/colorConst.dart';
 import 'package:henryportfolio/controller/portfolioController.dart';
 import 'package:henryportfolio/utils/services.dart';
 
@@ -74,7 +75,7 @@ class ContactScreen extends StatelessWidget {
   Widget _contactForm(BuildContext context) {
     return Form(
       key: _formKey,
-      autovalidateMode: AutovalidateMode.always,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -131,6 +132,17 @@ class ContactScreen extends StatelessWidget {
               maxLines: 4),
           const SizedBox(height: 25),
           ElevatedButton.icon(
+            style: ElevatedButton.styleFrom(
+              // Background color — using your existing teal/green accent
+              backgroundColor: AppColors.darkThemeprimaryColor,
+              // Text/icon color — black reads well against the bright teal,
+              // matching the same contrast pattern used elsewhere on your site
+              foregroundColor: Colors.black,
+              padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
             icon: const Icon(FontAwesomeIcons.share),
             onPressed: () async {
               if (_formKey.currentState!.validate()) {
@@ -143,7 +155,7 @@ class ContactScreen extends StatelessWidget {
                 Services().urlLauncher(mail);
               }
             },
-            label: const Text("Send"),
+            label: const Text("Send", style: TextStyle(fontSize: 16)),
           ),
         ],
       ),

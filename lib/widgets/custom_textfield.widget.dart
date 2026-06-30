@@ -22,6 +22,7 @@ class CustomTextField extends StatelessWidget {
       children: [
         TextFormField(
           validator: validator,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           keyboardType: keyboardType,
           decoration: InputDecoration(
               enabledBorder: const OutlineInputBorder(
