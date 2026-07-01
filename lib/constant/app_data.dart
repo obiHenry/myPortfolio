@@ -87,7 +87,7 @@ mixin PersonalDetails {
         'GitHub Actions'
       ],
       role:
-          'Co-founded HutDrop and led end-to-end development of both apps, from architecture through App Store and Play Store deployment.',
+          'Co-founded HutDrop and led end-to-end development of the rider and the merchant app, from architecture through App Store and Play Store deployment.',
       challenge:
           'Built an event-driven real-time order system, engineered OTP-based secure pickup verification, and set up a CI/CD pipeline with automated tests so every release ships with confidence.',
     ),

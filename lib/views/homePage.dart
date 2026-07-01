@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:henryportfolio/constant/app_data.dart';
 import 'package:henryportfolio/constant/colorConst.dart';
@@ -16,6 +17,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool onHover = false;
     final isSmall = AppScreenSizes.isSmallScreen(context);
     return Padding(
       padding: ScreenUiHelper().padding(
@@ -29,7 +31,7 @@ class HomePage extends StatelessWidget {
               ? Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _leftColumn(context),
+                    _leftColumn(context, onHover),
                     const SizedBox(height: 40),
                     const CustomSkillDesignWidget()
                   ],
@@ -37,7 +39,7 @@ class HomePage extends StatelessWidget {
               : Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Expanded(child: _leftColumn(context)),
+                    Expanded(child: _leftColumn(context, onHover)),
                     const Expanded(child: CustomSkillDesignWidget()),
                   ],
                 ),
@@ -46,7 +48,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _leftColumn(BuildContext context) {
+  Widget _leftColumn(BuildContext context, bool onHover) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -108,18 +110,43 @@ class HomePage extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 18),
-        OutlinedButton(
-          style: OutlinedButton.styleFrom(
-            side: const BorderSide(color: AppColors.darkThemeBackgroundColor),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-          ),
-          onPressed: () => Services().urlLauncher(SocialLinks.whatsappLink),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Text("Get In Touch  ➡️"),
-          ),
-        ),
+        StatefulBuilder(builder: (context, setState) {
+          return MouseRegion(
+            onEnter: (_) {
+              setState(() => onHover = true);
+            },
+            onExit: (_) {
+              setState(() => onHover = false);
+            },
+            child: OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                side: const BorderSide(color: AppColors.darkThemeprimaryColor),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5)),
+                backgroundColor: onHover
+                    ? AppColors.darkThemeprimaryColor
+                    : Colors.transparent,
+              ),
+              onPressed: () => Services().urlLauncher(SocialLinks.whatsappLink),
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  "Get In Touch  ➡️",
+                  style: TextStyle(
+                      color: onHover
+                          ? Colors.black
+                          : AppColors.darkThemeprimaryColor,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+            ),
+          ).animate(target: onHover ? 1.0 : 0.0).scaleXY(
+                begin: 1.0,
+                end: 1.04,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeOut,
+              );
+        }),
       ],
     );
   }

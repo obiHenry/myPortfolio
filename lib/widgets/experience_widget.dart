@@ -58,105 +58,111 @@ class _ExprienceWidgetState extends State<ExprienceWidget>
                 isScrollable: true,
                 physics: const BouncingScrollPhysics(),
                 tabs: [
-                  for (int i = 0; i < PersonalDetails.experienceList.length; i++)
+                  for (int i = 0;
+                      i < PersonalDetails.experienceList.length;
+                      i++)
                     Tab(child: Text(PersonalDetails.experienceList[i].title))
                 ]),
             Expanded(
-              child: TabBarView(
-                  physics: const BouncingScrollPhysics(),
-                  children: [
-                    for (int i = 0; i < PersonalDetails.experienceList.length; i++)
-                      SingleChildScrollView(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(height: 15),
-                            RichText(
-                              text: TextSpan(
-                                  text: PersonalDetails.experienceList[i].title,
-                                  style: ScreenUiHelper().title(context).copyWith(
-                                      color: AppColors.darkThemeTextPrimaryColor),
-                                  children: [
-                                    TextSpan(
-                                      text:
-                                          '  @${PersonalDetails.experienceList[i].position}',
-                                      style: ScreenUiHelper()
-                                          .body(context)
-                                          .copyWith(
-                                              color: AppColors.darkThemeprimaryColor),
-                                    )
-                                  ]),
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              PersonalDetails.experienceList[i].timePeriod,
-                              style: ScreenUiHelper().body(context).copyWith(
-                                  color: AppColors.darkThemeTextSecondaryColor),
-                            ),
-                            const SizedBox(height: 15),
-                            ListView.builder(
-                              physics: const NeverScrollableScrollPhysics(),
-                              primary: false,
-                              shrinkWrap: true,
-                              itemBuilder: (_, index) {
-                                return Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      const Icon(Icons.play_arrow, size: 20),
-                                      const SizedBox(width: 5),
-                                      Expanded(
-                                        child: Text(
-                                          PersonalDetails.experienceList[i]
-                                              .description[index],
-                                          style: ScreenUiHelper().body(context),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
-                              itemCount:
-                                  PersonalDetails.experienceList[i].description.length,
-                            ),
-                            const SizedBox(height: 15),
-                            Text('Tools Used', style: ScreenUiHelper().title(context)),
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.16,
-                              child: const Divider(
-                                color: AppColors.darkThemeprimaryColor,
-                                thickness: 2.5,
-                              ),
-                            ),
-                            const SizedBox(height: 15),
-                            ListView.builder(
-                              primary: false,
-                              physics: const NeverScrollableScrollPhysics(),
-                              shrinkWrap: true,
-                              itemBuilder: (_, index) {
-                                return Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Row(
-                                    children: [
-                                      const Icon(Icons.play_arrow,
-                                          color: AppColors.darkThemeTextPrimaryColor,
-                                          size: 20),
-                                      const SizedBox(width: 8),
-                                      Text(
-                                        PersonalDetails.experienceList[i].tools[index],
-                                        style: ScreenUiHelper().body(context),
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
-                              itemCount: PersonalDetails.experienceList[i].tools.length,
-                            ),
-                          ],
+              child:
+                  TabBarView(physics: const BouncingScrollPhysics(), children: [
+                for (int i = 0; i < PersonalDetails.experienceList.length; i++)
+                  SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 15),
+                        RichText(
+                          text: TextSpan(
+                              text: PersonalDetails.experienceList[i].title,
+                              style: ScreenUiHelper().title(context).copyWith(
+                                  color: AppColors.darkThemeTextPrimaryColor),
+                              children: [
+                                TextSpan(
+                                  text:
+                                      '  @${PersonalDetails.experienceList[i].position}',
+                                  style: ScreenUiHelper()
+                                      .body(context)
+                                      .copyWith(
+                                          color:
+                                              AppColors.darkThemeprimaryColor),
+                                )
+                              ]),
                         ),
-                      ),
-                  ]),
+                        const SizedBox(height: 8),
+                        Text(
+                          PersonalDetails.experienceList[i].timePeriod,
+                          style: ScreenUiHelper().body(context).copyWith(
+                              color: AppColors.darkThemeTextSecondaryColor),
+                        ),
+                        const SizedBox(height: 15),
+                        ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          primary: false,
+                          shrinkWrap: true,
+                          itemBuilder: (_, index) {
+                            return Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Icon(Icons.play_arrow, size: 20),
+                                  const SizedBox(width: 5),
+                                  Expanded(
+                                    child: Text(
+                                      PersonalDetails
+                                          .experienceList[i].description[index],
+                                      style: ScreenUiHelper().body(context),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                          itemCount: PersonalDetails
+                              .experienceList[i].description.length,
+                        ),
+                        const SizedBox(height: 15),
+                        Text('Tools Used',
+                            style: ScreenUiHelper().title(context)),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.16,
+                          child: const Divider(
+                            color: AppColors.darkThemeprimaryColor,
+                            thickness: 2.5,
+                          ),
+                        ),
+                        const SizedBox(height: 15),
+                        ListView.builder(
+                          primary: false,
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemBuilder: (_, index) {
+                            return Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Row(
+                                children: [
+                                  const Icon(Icons.play_arrow,
+                                      color:
+                                          AppColors.darkThemeTextPrimaryColor,
+                                      size: 20),
+                                  const SizedBox(width: 8),
+                                  Text(
+                                    PersonalDetails
+                                        .experienceList[i].tools[index],
+                                    style: ScreenUiHelper().body(context),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                          itemCount:
+                              PersonalDetails.experienceList[i].tools.length,
+                        ),
+                      ],
+                    ),
+                  ),
+              ]),
             ),
           ],
         ),
@@ -195,7 +201,8 @@ class _ExprienceWidgetState extends State<ExprienceWidget>
                     .copyWith(color: AppColors.darkThemeTextPrimaryColor),
                 children: [
                   TextSpan(
-                    text: '  @${PersonalDetails.experienceList[index].position}',
+                    text:
+                        '  @${PersonalDetails.experienceList[index].position}',
                     style: ScreenUiHelper().body(context).copyWith(
                           fontWeight: FontWeight.w100,
                           color: AppColors.darkThemeprimaryColor,
@@ -225,7 +232,9 @@ class _ExprienceWidgetState extends State<ExprienceWidget>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Accomplishments',
-                      style: ScreenUiHelper().title(context).copyWith(fontSize: 16)),
+                      style: ScreenUiHelper()
+                          .title(context)
+                          .copyWith(fontSize: 16)),
                   const SizedBox(height: 15),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.5,
@@ -239,12 +248,14 @@ class _ExprienceWidgetState extends State<ExprienceWidget>
                           child: Row(
                             children: [
                               const Icon(Icons.play_arrow,
-                                  color: AppColors.darkThemeprimaryColor, size: 20),
+                                  color: AppColors.darkThemeprimaryColor,
+                                  size: 20),
                               const SizedBox(width: 8),
                               SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.45,
                                 child: Text(
-                                  PersonalDetails.experienceList[index].description[i],
+                                  PersonalDetails
+                                      .experienceList[index].description[i],
                                   style: ScreenUiHelper()
                                       .body(context)
                                       .copyWith(fontSize: 14),
@@ -254,8 +265,8 @@ class _ExprienceWidgetState extends State<ExprienceWidget>
                           ),
                         );
                       },
-                      itemCount:
-                          PersonalDetails.experienceList[index].description.length,
+                      itemCount: PersonalDetails
+                          .experienceList[index].description.length,
                     ),
                   ),
                 ],
@@ -265,7 +276,9 @@ class _ExprienceWidgetState extends State<ExprienceWidget>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Tools Used:',
-                      style: ScreenUiHelper().title(context).copyWith(fontSize: 16)),
+                      style: ScreenUiHelper()
+                          .title(context)
+                          .copyWith(fontSize: 16)),
                   const SizedBox(height: 15),
                   SizedBox(
                     width: AppScreenSizes.isMediumScreen(context)
@@ -274,10 +287,13 @@ class _ExprienceWidgetState extends State<ExprienceWidget>
                     child: Wrap(
                       children: [
                         for (int i = 0;
-                            i < PersonalDetails.experienceList[index].tools.length;
+                            i <
+                                PersonalDetails
+                                    .experienceList[index].tools.length;
                             i++)
                           _ToolChip(
-                            label: PersonalDetails.experienceList[index].tools[i],
+                            label:
+                                PersonalDetails.experienceList[index].tools[i],
                             controller: _controller,
                             isMedium: AppScreenSizes.isMediumScreen(context),
                             isSmall: AppScreenSizes.isSmallScreen(context),
@@ -330,7 +346,7 @@ class _ToolChipState extends State<_ToolChip> {
       child: ScaleTransition(
         scale: Tween(begin: 1.0, end: 1.08).animate(widget.controller),
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 700),
+          duration: const Duration(milliseconds: 300),
           decoration: BoxDecoration(
             border: Border.all(
                 color: _isHovered
